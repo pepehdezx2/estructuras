@@ -7,9 +7,19 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <queue>
+using namespace std;
+int main() {
+    priority_queue<int> myPQ;
+    if(myPQ.empty()){
+        cout << "vacio" << endl;
+    }
+    myPQ.push(1);
+    myPQ.push(2);
+    myPQ.push(3);
+    cout << "size: " << myPQ.size() << endl;
+    cout << "primer elemento: " << myPQ.top() << endl;
+    myPQ.pop();
+    cout << myPQ.top() << endl;
     return 0;
 }
